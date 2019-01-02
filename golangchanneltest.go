@@ -7,7 +7,9 @@ import ("fmt"
 func main() {
 	ch := make(chan int)
 
-go func(){
+	fmt.Println("Starting....")
+	
+	go func(){
 		for i := 0;i<10; i++ {
 			fmt.Printf("sending %d\n", i)
 			ch <- i
