@@ -6,7 +6,6 @@ pipeline {
                     echo "Hello, let's begin..."
                     sh '''
                     hostname
-                    env
                     '''
                 }
             }
