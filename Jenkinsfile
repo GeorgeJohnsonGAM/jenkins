@@ -13,8 +13,7 @@ pipeline {
                 steps {
                     echo "Running the first proper step..."
                     sh '''
-                    ls -ltr /tmp
-                    sleep 10
+                    go build golangchanneltest.go
                     '''
                 }
             }
@@ -22,8 +21,7 @@ pipeline {
                 steps {
                     echo "Now we're running!"
                     sh '''
-                    hostname
-                    sleep 5
+                    ./golangchanneltest
                     '''
                 }
             }
