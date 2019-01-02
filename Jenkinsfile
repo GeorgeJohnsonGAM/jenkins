@@ -4,7 +4,9 @@ pipeline {
             stage("Stage 1"){
                 steps {
                     echo "Hello, let's begin..."
+                    sh '''
                     env
+                    '''
                 }
             }
             stage("Stage 2"){
