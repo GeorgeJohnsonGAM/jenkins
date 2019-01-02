@@ -6,6 +6,7 @@ pipeline {
                     echo "Hello, let's begin..."
                     sh '''
                     hostname
+                    ls -ltr /tmp
                     '''
                 }
             }
