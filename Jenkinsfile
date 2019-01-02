@@ -5,6 +5,7 @@ pipeline {
                 steps {
                     echo "Hello, let's begin..."
                     sh '''
+                    hostname
                     env
                     '''
                 }
