@@ -10,10 +10,8 @@ func main() {
 	fmt.Println("\nStarting....")
 	fmt.Println("======")
 
-	if len(os.Args) == 2 {
-		for x,_ := range os.Args {
-			fmt.Printf("Parm [%d] : [%s]\n", x, os.Args[x] )
-		}
+	for x,_ := range os.Args {
+		fmt.Printf("Parm [%d] : [%s]\n", x, os.Args[x] )
 	}
 
 	fmt.Println("======")
