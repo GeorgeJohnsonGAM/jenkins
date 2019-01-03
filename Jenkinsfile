@@ -1,17 +1,15 @@
 pipeline {
     agent { label "SLAVE01" }
         stages {
-            stage("Stage 1"){
+            stage("Stage 1 - Start"){
                 steps {
-                    echo "Hello, let's begin..."
+                    echo "Starting build process"
                     sh '''
-                    hostname
-                    ls -ltr /tmp
-		    ls -ltr /usr
+                    ls -ltr
                     '''
                 }
             }
-            stage("Stage 2"){
+            stage("Stage 2 - Build"){
                 steps {
                     echo "Running the first proper step..."
                     sh '''
@@ -19,7 +17,7 @@ pipeline {
                     '''
                 }
             }
-            stage("Stage 3"){
+            stage("Stage 3 - Exec"){
                 steps {
                     echo "Now we're running!"
                     sh '''
@@ -29,9 +27,9 @@ pipeline {
             }
             stage("Stage 4"){
                 steps {
-                    echo "I'm bored, quitting time!"
+                    echo "Complete."
                     sh '''
-                    sleep 10
+                    ls -ltr
                     '''
                 }
             }
