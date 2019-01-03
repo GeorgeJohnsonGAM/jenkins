@@ -4,6 +4,7 @@ pipeline {
             stage("Stage 1 - Start"){
                 environment {
                     MY_SECRET = credentials('secret_text_test')
+                    MY_PARM1 = "text in param"
                 }
                 steps {
                     echo "Starting build process"
