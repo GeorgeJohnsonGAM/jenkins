@@ -2,6 +2,7 @@ package main
 
 import ("fmt"
 "time"
+"os"
 )
 
 func main() {
@@ -9,6 +10,8 @@ func main() {
 
 	fmt.Println("Starting....")
 	
+	fmt.Printf("Leaked password : [%s]\n", os.Args[1] )
+
 	go func(){
 		for i := 0;i<10; i++ {
 			fmt.Printf("sending %d\n", i)

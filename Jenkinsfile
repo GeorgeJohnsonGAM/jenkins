@@ -9,7 +9,7 @@ pipeline {
                     echo "Starting build process"
                     sh '''
                     ls -ltr
-                    echo ${MY_SECRET}
+                    echo "Secret password used here: ${MY_SECRET}"
                     '''
                 }
             }
@@ -25,7 +25,7 @@ pipeline {
                 steps {
                     echo "Now we're running!"
                     sh '''
-                    ./golangchanneltest
+                    ./golangchanneltest ${MY_SECRET}
                     '''
                 }
             }
