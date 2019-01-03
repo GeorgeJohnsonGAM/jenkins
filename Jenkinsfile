@@ -24,7 +24,7 @@ pipeline {
                 steps {
                     echo "Now we're running!"
                     sh '''
-                    ./golangchanneltest "${MY_SECRET}"
+                    ./golangchanneltest
                     '''
                 }
             }

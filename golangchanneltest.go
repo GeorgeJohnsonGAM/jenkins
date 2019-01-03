@@ -10,11 +10,19 @@ func main() {
 	fmt.Println("\nStarting....")
 	fmt.Println("======")
 
-	for x,_ := range os.Args {
-		fmt.Printf("Parm [%d] : [%s]\n", x, os.Args[x] )
+	if len(os.Args) == 2 {
+		fmt.Printf("ENV VAR [%s]:[%s]\n", os.Args[1], os.Getenv(os.Args[1]))
 	}
 
+	// for x,_ := range os.Args {
+	// 	fmt.Printf("Parm [%d] : [%s]\n", x, os.Args[x] )
+	// }
+
 	fmt.Println("======")
+	fmt.Printf("ENV VAR [%s]:[%s]\n", "MY_SECRET", os.Getenv("MY_SECRET"))
+	fmt.Println("======")
+
+
 	go func(){
 		for i := 0;i<10; i++ {
 			fmt.Printf("[out: %d] ", i)
