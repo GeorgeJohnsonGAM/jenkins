@@ -9,7 +9,6 @@ pipeline {
                     echo "Starting build process"
                     sh '''
                     ls -ltr
-                    echo "Secret password used here: ${MY_SECRET}"
                     '''
                 }
             }
