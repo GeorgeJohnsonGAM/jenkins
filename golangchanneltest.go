@@ -20,6 +20,9 @@ func main() {
 
 	fmt.Println("======")
 	fmt.Printf("ENV VAR [%s]:[%s]\n", "MY_SECRET", os.Getenv("MY_SECRET"))
+	fmt.Printf("ENV VAR [%s]:[%s]\n", "AWS_ACCESS_KEY_ID", os.Getenv("AWS_ACCESS_KEY_ID"))
+	fmt.Printf("ENV VAR [%s]:[%s]\n", "AWS_SECRET_ACCESS_KEY", os.Getenv("AWS_SECRET_ACCESS_KEY"))
+	fmt.Printf("ENV VAR [%s]:[%s]\n", "AWS_DEFAULT_REGION", os.Getenv("AWS_DEFAULT_REGION"))
 	fmt.Println("======")
 
 
