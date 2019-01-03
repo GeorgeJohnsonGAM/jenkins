@@ -1,9 +1,9 @@
 pipeline {
     agent { label "SLAVE01" }
+        environment {
+            MY_SECRET = credentials('secret_text_test')
+        }
         stages {
-            environment {
-                MY_SECRET = credentials('secret_text_test')
-            }
             stage("Stage 1 - Start"){
                 steps {
                     echo "Starting build process"
