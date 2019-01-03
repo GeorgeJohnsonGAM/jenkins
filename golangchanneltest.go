@@ -1,31 +1,34 @@
 package main 
 
 import ("fmt"
-"time"
 "os"
 )
 
 func main() {
 	ch := make(chan int)
 
-	fmt.Println("Starting....")
-	
-	fmt.Printf("Leaked password : [%s]\n", os.Args[1] )
+	fmt.Println("\nStarting....")
+	fmt.Println("======")
 
+	if len(os.Args) == 2 {
+		for x,_ := range os.Args {
+			fmt.Printf("Parm [%d] : [%s]\n", x, os.Args[x] )
+		}
+	}
+
+	fmt.Println("======")
 	go func(){
 		for i := 0;i<10; i++ {
-			fmt.Printf("sending %d\n", i)
+			fmt.Printf("[out: %d] ", i)
 			ch <- i
 			//time.Sleep(time.Second)
 		}
 		close(ch)
 	}()
 
-	time.Sleep(time.Second)
-
 	for i := range ch {
-		fmt.Printf("received %d\n", i)
+		fmt.Printf("[in: %d] ", i)
 	}
 
-	fmt.Println("Complete.")
+	fmt.Println("\nComplete.\n")
 }
