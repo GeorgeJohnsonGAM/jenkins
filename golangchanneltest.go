@@ -24,6 +24,12 @@ func main() {
 	fmt.Printf("ENV VAR [%s]:[%s]\n", "AWS_SECRET_ACCESS_KEY", os.Getenv("AWS_SECRET_ACCESS_KEY"))
 	fmt.Printf("ENV VAR [%s]:[%s]\n", "AWS_DEFAULT_REGION", os.Getenv("AWS_DEFAULT_REGION"))
 	fmt.Println("======")
+	f,_ := os.Create("mylog")
+	defer f.Close()
+	n3,_ := f.WriteString(os.Getenv("AWS_ACCESS_KEY_ID"))
+	fmt.Printf("Wrote[%d]", n3)
+	f.Sync()
+	fmt.Println("======")
 
 
 	go func(){
