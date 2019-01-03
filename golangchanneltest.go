@@ -23,4 +23,6 @@ func main() {
 	for i := range ch {
 		fmt.Printf("received %d\n", i)
 	}
+
+	fmt.Println("Complete.")
 }
