@@ -7,6 +7,7 @@ pipeline {
                     sh '''
                     hostname
                     ls -ltr /tmp
+		    ls -ltr /usr
                     '''
                 }
             }
