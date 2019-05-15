@@ -9,9 +9,29 @@ node {
   }
 }
 
+
 def func01(){
   stage("Stage 2") {
     echo "Pushout:  ${STRING01}"
+
+    startStr = "/Testing/sandbox/Curation/top_AWS_Athena_to_Step_Func_Curation.jmx"
+    String[] pathSplit =  startStr.split('/')
+    cntChunks = pathSplit.length;
+
+
+    // - TEST_BASE_PATH
+    // The root path
+    // eg: ${WORKSPACE}/Testing
+
+    // - TEST_PATH_TO_JMX_FILE
+    // relative path to primary JMX file
+    // eg: sandbox/Curation/top_AWS_Athena_to_Step_Func_Curation.jmx
+
+    // - TEST_SOURCE_CSV_FILE
+    // name of the test metadata CSV file
+    // eg: BTCA_curate_001.csv
+
+
   }
 }
 
