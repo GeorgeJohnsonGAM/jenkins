@@ -3,7 +3,8 @@
 node {
   stage("Stage 1") {
     echo "Test"
-    echo "Param: ${STRING01}"
+    // echo "Param: ${STRING01}"
+    func01()
   }
 }
 
