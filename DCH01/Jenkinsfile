@@ -6,3 +6,9 @@ node {
     echo "Param: ${STRING01}"
   }
 }
+
+def func01(){
+  stage("Stage 2") {
+    echo "Pushout:  ${STRING01}"
+  }
+}
