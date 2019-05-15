@@ -18,17 +18,11 @@ pipeline {
             stage("Stage 2 - Build"){
                 steps {
                     echo "Running the first proper step..."
-                    sh '''
-                    go build golangchanneltest.go
-                    '''
                 }
             }
             stage("Stage 3 - Exec"){
                 steps {
                     echo "Now we're running!"
-                    sh '''
-                    ./golangchanneltest
-                    '''
                 }
             }
             stage("Stage 4"){
