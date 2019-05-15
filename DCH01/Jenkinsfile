@@ -5,11 +5,18 @@ node {
     echo "Test"
     // echo "Param: ${STRING01}"
     func01()
+    showWorkspace()
   }
 }
 
 def func01(){
   stage("Stage 2") {
     echo "Pushout:  ${STRING01}"
+  }
+}
+
+def showWorkspace(){
+  stage("Stage 3") {
+    echo "Pushout:  ${WORKSPACE}"
   }
 }
