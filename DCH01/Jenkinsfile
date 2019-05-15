@@ -17,7 +17,7 @@ def func01(){
     startStr = "/Testing/sandbox/Curation/top_AWS_Athena_to_Step_Func_Curation.jmx"
     String[] pathSplit =  startStr.split('/')
     cntChunks = pathSplit.length;
-    echo "X: ${cntChunks}"
+    echo "X: ${cntChunks[5]}"
 
     // - TEST_BASE_PATH
     // The root path
